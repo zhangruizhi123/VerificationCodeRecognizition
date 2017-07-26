@@ -54,6 +54,12 @@ public class CutFont {
 						break;
 					}
 				} else {
+					//当是最后一列时直接就是边界了
+					if(i==img.getWidth()-1){
+						start = false;
+						list.get(list.size() - 1).right = i;
+						break;
+					}
 					if (img.getRGB(i, j) == c.getRGB()) {
 						break;
 					}
